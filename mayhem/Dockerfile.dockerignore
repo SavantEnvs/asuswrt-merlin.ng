@@ -1,0 +1,12 @@
+# The firmware tree is ~9 GB, almost all of it vendor SDK trees that no target builds. Send only
+# the bundled libraries the targets fuzz (plus .git, which the image keeps for the PATCH tier).
+release/*
+!release/src
+release/src/*
+!release/src/router
+release/src/router/*
+!release/src/router/zlib
+!release/src/router/expat
+!release/src/router/openssl-1.1
+!release/src/router/dnsmasq
+mayhem/build

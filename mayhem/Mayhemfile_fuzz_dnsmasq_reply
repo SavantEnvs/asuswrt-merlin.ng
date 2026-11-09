@@ -1,0 +1,9 @@
+project: savantenvs/asuswrt-merlin.ng
+target: fuzz_dnsmasq_reply
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dnsmasq_reply/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dnsmasq_reply
+    libfuzzer: true
+    timeout: 10
