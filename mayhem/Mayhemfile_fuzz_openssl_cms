@@ -1,0 +1,9 @@
+project: savantenvs/asuswrt-merlin.ng
+target: fuzz_openssl_cms
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_openssl_cms/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_openssl_cms
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,6 @@
+project: savantenvs/asuswrt-merlin.ng
+target: fuzz_openssl_client
+cmds:
+  - cmd: /mayhem/fuzz_openssl_client
+    libfuzzer: true
+    timeout: 10
